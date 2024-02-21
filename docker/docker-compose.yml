@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   acmanagerdb:
@@ -12,10 +12,11 @@ services:
       - ./db:/docker-entrypoint-initdb.d
 
   acmanager-server:
-    image: kun368/acmanager:master
+    image: zilanlann/acmanager:master
     ports:
       - 8105:8080
     depends_on:
       - acmanagerdb
     links:
       - acmanagerdb
+
